@@ -67,16 +67,12 @@ class PikachuSegmenter(SegmenterInterface):
     def __init__(self):
         # pokemon-cave.jpg BGRK 1: [ 55, 181, 239, 184]
         # pokemon-cave.jpg BGRK 2:
-        # pokemon-cave.jpg HSVK 1:
-        # pokemon-cave.jpg HSVK 2:
         # pokemon-forest.jpg BGRK 1: [ 80, 215, 243, 208]
         # pokemon-forest.jpg BGRK 2: [ 82, 212, 242, 206]
-        # pokemon-forest.jpg HSVK 1:
-        # pokemon-forest.jpg HSVK 2:
         # ketchup.jpg BGRK 1: [ 50, 202, 219, 190]
         # ketchup.jpg BGRK 2: [ 48, 204, 223, 192]
-        self.THRESHOLD_LOW = (35, 114, 218, 118)  # TODO: replace with the BGRK values you're looking for
-        self.THRESHOLD_HIGH = (82, 215, 243, 208)  # TODO: replace with the BGRK values you're looking for
+        self.THRESHOLD_LOW = (35, 114, 218, 118)
+        self.THRESHOLD_HIGH = (82, 215, 243, 208)
 
     def enhance_image(self, bgr_image: np.ndarray) -> np.ndarray:
         """
